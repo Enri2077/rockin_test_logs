@@ -1,0 +1,10 @@
+best_distance_error: 0.0016707448478597228
+best_run: 3
+execution_time: 73.70334196090698
+runs_details:
+  0: {distance_error: 0.03477250481082847, execution_time: 10.397351026535034, spec: line}
+  1: {distance_error: 0.021376267633294043, execution_time: 14.506772994995117, spec: spline}
+  2: {distance_error: 0.02089923916855603, execution_time: 17.401607990264893, spec: line}
+  3: {distance_error: 0.0016707448478597228, execution_time: 16.115315914154053, spec: spline}
+  4: {distance_error: 0.00617314349767105, execution_time: 15.282294034957886, spec: line}
+
