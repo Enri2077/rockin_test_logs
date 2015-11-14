@@ -1,0 +1,48 @@
+This bag is the recording from a complete benchmark test.
+
+
+### To execute a test using this bag, run these commands in this order and each in a different terminal:
+
+$ roscore
+$ rosparam set use_sim_time true
+$ roslaunch rockin_scoring fbm3w_test_optitrackless.launch 
+rockin_test_logs$ rosbag play log_fbm3w_2015-11-10-11-31-36_0.bag --bags log_fbm3w_2015-11-10-11-31-36_0.bag --clock --topics /fbm3w/robot_at_work/pose /fbm3w/robot_at_work/pose2d /rosout /tf
+
+You may comment out the nodes 'refbox' (fbm3w_refbox_test) and 'client' (fbm3w_client_test) from fbm3w_test_optitrackless.launch to test with CFH.
+
+Note that only some topics must be played back while testing bmbox and refbox(CFH), as specified in the command. 
+
+
+### rosbag info:
+
+path:        log_fbm3w_2015-11-10-11-31-36_0.bag
+version:     2.0
+duration:    7:56s (476s)
+start:       Nov 10 2015 11:31:36.14 (1447151496.14)
+end:         Nov 10 2015 11:39:32.99 (1447151972.99)
+size:        24.2 MB
+messages:    189643
+compression: none [29/29 chunks]
+types:       geometry_msgs/Pose2D       [938fa65709584ad8e77d238529be13b8]
+             geometry_msgs/PoseStamped  [d3812c3cbc69362b77dc0b19b345f8f5]
+             nav_msgs/MapMetaData       [10cfc8a2818024d3248802c00c95f11b]
+             nav_msgs/OccupancyGrid     [3381f2d731d4076ec5c71b0759edbe4e]
+             nav_msgs/Path              [6227e2b7e9cce15051f669a5e197bbf7]
+             rockin_scoring/BmBoxState  [7bdf2cf145136df61982d76bf05072e4]
+             rockin_scoring/ClientState [dff86a4dec29b40c2a168a3115abc7c0]
+             rockin_scoring/RefBoxState [ba79e0552b0b558b2287af5ad506a2fa]
+             rosgraph_msgs/Log          [acffd30cd6b6de30f120938c17c593fb]
+             tf/tfMessage               [94810edda583a504dfda3829e70d7eec]
+             tf2_msgs/TFMessage         [94810edda583a504dfda3829e70d7eec]
+topics:      /fbm3w/bmbox_state             2544 msgs    : rockin_scoring/BmBoxState 
+             /fbm3w/client_state            2546 msgs    : rockin_scoring/ClientState
+             /fbm3w/map                        1 msg     : nav_msgs/OccupancyGrid    
+             /fbm3w/map_metadata               1 msg     : nav_msgs/MapMetaData      
+             /fbm3w/refbox_state            2554 msgs    : rockin_scoring/RefBoxState
+             /fbm3w/robot_at_work/pose     57207 msgs    : geometry_msgs/PoseStamped 
+             /fbm3w/robot_at_work/pose2d   57208 msgs    : geometry_msgs/Pose2D      
+             /fbm3w/robot_path_in_frame        5 msgs    : nav_msgs/Path             
+             /fbm3w/target_path_in_frame       5 msgs    : nav_msgs/Path             
+             /rosout                         142 msgs    : rosgraph_msgs/Log          (7 connections)
+             /tf                           67430 msgs    : tf2_msgs/TFMessage         (3 connections)
+

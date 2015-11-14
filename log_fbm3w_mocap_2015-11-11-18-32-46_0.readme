@@ -1,0 +1,38 @@
+This bag is the recording of some realistic movements for FBM3W (Control Functionality).
+
+
+### To execute a test using this bag, run these commands in this order and each in a different terminal:
+
+$ roscore
+$ rosparam set use_sim_time true
+$ roslaunch rockin_scoring fbm3w_test_optitrackless.launch 
+rockin_test_logs$ rosbag play log_fbm3w_mocap_2015-11-11-18-32-46_0.bag --clock
+
+You may comment out the nodes 'refbox' (fbm3w_refbox_test) and 'client' (fbm3w_client_test) from fbm3w_test_optitrackless.launch to test with CFH.
+
+
+
+
+### rosbag info:
+
+path:        log_fbm3w_mocap_2015-11-11-18-32-46_0.bag
+version:     2.0
+duration:    2:45s (165s)
+start:       Nov 11 2015 18:32:46.26 (1447263166.26)
+end:         Nov 11 2015 18:35:31.27 (1447263331.27)
+size:        8.7 MB
+messages:    60984
+compression: none [10/10 chunks]
+types:       geometry_msgs/Pose2D      [938fa65709584ad8e77d238529be13b8]
+             geometry_msgs/PoseStamped [d3812c3cbc69362b77dc0b19b345f8f5]
+             nav_msgs/MapMetaData      [10cfc8a2818024d3248802c00c95f11b]
+             nav_msgs/OccupancyGrid    [3381f2d731d4076ec5c71b0759edbe4e]
+             rosgraph_msgs/Log         [acffd30cd6b6de30f120938c17c593fb]
+             tf2_msgs/TFMessage        [94810edda583a504dfda3829e70d7eec]
+topics:      /fbm3w/map                        1 msg     : nav_msgs/OccupancyGrid   
+             /fbm3w/map_metadata               1 msg     : nav_msgs/MapMetaData     
+             /fbm3w/robot_at_work/pose     19778 msgs    : geometry_msgs/PoseStamped
+             /fbm3w/robot_at_work/pose2d   19777 msgs    : geometry_msgs/Pose2D     
+             /rosout                           4 msgs    : rosgraph_msgs/Log         (3 connections)
+             /tf                           21423 msgs    : tf2_msgs/TFMessage        (2 connections)
+
